@@ -6,6 +6,7 @@ const { testConnection, closePool } = require("./api/database/connect");
 const { errorLogger } = require("./api/middleware/errorhandler");
 const {
   NODE_ENV,
+  PORT,
   EMPLOYEE_MANAGER_API_PUBLIC_FOLDER,
   EMPLOYEE_MANAGER_API_SERVER_PORT,
 } = process.env;
@@ -30,8 +31,11 @@ const startAppServer = async () => {
       )
     );
     app.use(errorLogger);
-    app.listen(parseInt(EMPLOYEE_MANAGER_API_SERVER_PORT));
-    console.log(`Server started on port: ${EMPLOYEE_MANAGER_API_SERVER_PORT}`);
+    const portToListen = PORT
+      ? parseInt(PORT)
+      : parseInt(EMPLOYEE_MANAGER_API_SERVER_PORT);
+    app.listen(portToListen);
+    console.log(`Server started on port: ${portToListen}`);
   } catch (error) {
     console.log(`Error in function::startAppServer`, error);
     process.kill(process.pid, "SIGINT");
