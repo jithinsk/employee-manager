@@ -1,0 +1,22 @@
+.delete-container {
+  .form-delete-text {
+    font-size: 16px;
+    text-align: center;
+    color: red;
+  }
+  .form-feedback {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+  }
+
+  .form-feedback-positive {
+    text-align: center;
+    color: green;
+    font-size: 18px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}

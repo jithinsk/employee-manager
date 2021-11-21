@@ -1,0 +1,10 @@
+.admin-container {
+  background-color: azure;
+  .navigation-bar {
+    border-bottom: 1px solid black;
+    padding-right: 30px;
+    .logout-button {
+      font-weight: 400;
+    }
+  }
+}

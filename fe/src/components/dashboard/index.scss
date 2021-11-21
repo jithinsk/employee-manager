@@ -1,0 +1,17 @@
+.dashboard-container {
+  .button-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    .stats-heading {
+      display: inline-block;
+    }
+    .add-employee-button {
+      border-radius: 10px;
+      width: 185px;
+      height: 45px;
+    }
+  }
+}
