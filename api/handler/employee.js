@@ -52,7 +52,6 @@ async function searchEmployees(searchFields) {
       limit,
       skip
     );
-    console.log(countData)
     return { employees: response, totalPages: Math.ceil(countData.totalCount / limit) };
   } catch (error) {
     return Promise.reject(error);
