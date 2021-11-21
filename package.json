@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "start": "pm2 start prod.config.js",
+    "heroku-postbuild": "cd fe && npm install --also=dev && npm run build && cp -r build/ ../dist/ && cd ../",
     "dev": "pm2 start dev.config.js",
     "prod": "cd fe && npm run build && cp -r build/ ../dist/ && cd ../ && pm2 start prod.config.js"
   },
