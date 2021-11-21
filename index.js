@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const router = require("./api/routes/");
 const { testConnection, closePool } = require("./api/database/connect");
 const { errorLogger } = require("./api/middleware/errorhandler");
@@ -13,7 +14,7 @@ const startAppServer = async () => {
   try {
     await testConnection();
     const app = express();
-    if (NODE_ENV === "dev")
+    if (NODE_ENV === "development")
       app.use(
         cors({
           origin: "*",
