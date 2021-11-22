@@ -3,7 +3,7 @@
 ## Setting up
 
 - Setup Database
- - Use the `sql/base.sql` file to create database.
+  - Use the `sql/base.sql` file to create database.
 - API
   - Copy the contents of `.env` file to `local.env`
   - Modify environmental variables accordingly
